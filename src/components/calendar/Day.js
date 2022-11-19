@@ -66,6 +66,13 @@ function Day({
             $(".end-date-selected")
               .nextAll()
               .attr("style", "background-color: white !important");
+
+            // end dateden sonraki parentlara erişerek sarı olanları beyaz yapar
+            $(".end-date-selected")
+              .parents(".calendar-container")
+              .nextAll()
+              .find(".day-container")
+              .attr("style", "background-color: white !important");
             // end date bilgileri alınıyor
             setStoreBookingInfos({
               ...storeBookingInfos,
